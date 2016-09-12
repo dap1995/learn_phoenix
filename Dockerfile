@@ -14,6 +14,7 @@ ENV MIX_ENV prod
 RUN mix local.hex --force
 RUN mix local.rebar --force
 RUN mix deps.get
+RUN mix deps.compile
 ENV PORT 8080
 
 RUN mix compile
